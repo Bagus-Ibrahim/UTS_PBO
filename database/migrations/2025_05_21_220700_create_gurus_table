@@ -1,0 +1,7 @@
+Schema::create('gurus', function (Blueprint $table) {
+    $table->id();
+    $table->string('nama');
+    $table->string('nip')->unique();
+    $table->foreignId('mapel_id')->constrained()->onDelete('cascade');
+    $table->timestamps();
+});

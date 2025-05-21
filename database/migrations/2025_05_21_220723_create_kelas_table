@@ -1,0 +1,6 @@
+Schema::create('kelas', function (Blueprint $table) {
+    $table->id();
+    $table->string('nama');
+    $table->foreignId('guru_id')->constrained()->onDelete('cascade');
+    $table->timestamps();
+});
